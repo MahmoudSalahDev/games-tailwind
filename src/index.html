@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tailwind</title>
+    <link rel="icon" href="./images/Smiley.svg.png">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Nerko+One&display=swap"
+        rel="stylesheet">
+    <!-- FONTAWESOME -->
+    <link rel="stylesheet" href="./css/all.min.css">
+    <!-- BOOTSTRAP -->
+    <!-- <link rel="stylesheet" href="./css/bootstrap.min.css"> -->
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/output.css">
+
+    <!-- <link rel="stylesheet" href="./css/style.css"> -->
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+</head>
+
+<body>
+    <div class="loading hidden">
+        <span class="loader"></span>
+    </div>
+    <section class="home " id="home">
+        <header>
+            <img src="./images/wraper.png" class="w-full object-cover max-h-[30vh]" alt="">
+        </header>
+        <nav
+            class="md:[width:50%] lg:[width:75%] bg-[#3a497b] rounded-[25px] mt-[-31.5px] m-auto  shadow-[0_0_10px_0_rgba(0,0,0,0.7)]  px-2 sm:px-4 py-2.5 ">
+            <div class="container flex flex-wrap justify-between items-center mx-auto">
+                <a href="/" class="flex items-center">
+                    <span class="flex items-center self-center text-xl uppercase whitespace-nowrap text-white">
+                        <img src="./images/logo-sm.png" class="w-[40px]" alt="">Game Reviews
+                    </span>
+                </a>
+
+                <div class="flex items-center">
+                    <button id="menu-toggle" type="button"
+                        class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 md:hidden">
+                        <span class="sr-only">Open main menu</span>
+                        <!-- Hamburger icon -->
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16m-7 6h7" />
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="w-full md:block md:w-auto hidden" id="mobile-menu">
+                    <ul
+                        class="flex flex-col mt-4 text-[12.25px] text-white uppercase md:flex-row  md:mt-0  md:font-medium">
+                        <li>
+                            <a href="#" class="block py-2 px-2  active hover:text-[#09c]  transition-colors">
+                                mmorpg
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="block py-2 px-2   hover:text-[#09c] transition-colors">
+                                shooter
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="block py-2 px-2   hover:text-[#09c] transition-colors">
+                                sailing
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="block py-2 px-2   hover:text-[#09c] transition-colors">
+                                permadeath
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="block py-2 px-2   hover:text-[#09c] transition-colors">
+                                superhero
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="block py-2 px-2   hover:text-[#09c] transition-colors">
+                                pixel
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <main>
+            <div class="container mt-[40px]">
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-[25px]" id="gamesData">
+                    
+                </div>
+            </div>
+
+        </main>
+    </section>
+    <section class="details hidden" id="details">
+        <div class="container py-4 text-white">
+            <div class="head flex  justify-between items-center">
+                <h4 class="text-[28px] py-[24px] mb-[8px]">Details Game</h4>
+                <i class="fa-solid fa-xmark text-[28px] hover:cursor-pointer hover:text-[#c8c9ca] text-[#939395]" id="close"></i>
+            </div>
+            <div class="flex flex-col md:flex-row pt-4">
+                <div class="md:w-[calc(100%/3)] w-full px-[12px]" id="detailsphoto">
+                    <img src="./images/thumbnail.jpg" alt="">
+                </div>
+                <div class="md:w-[calc((100%/3)*2)] w-full px-[12px]">
+                    <h3 id="gameTitle" class="text-[28px] mb-[8px]">Title:</h3>
+                    <p class="text-[16px] mb-[16px]">Category: <span class="bg-[#0dcaf0] py-[4.2px] text-[12px]  text-black px-[7.8px] font-semibold rounded-[7px]" id="Category"></span></p>
+                    <p class="text-[16px] mb-[16px]">Platform: <span class=" bg-[#0dcaf0] py-[4.2px] text-[12px]  text-black px-[7.8px] font-semibold rounded-[7px]" id="Platform"></span></p>
+                    <p class="text-[16px] mb-[16px]">Status: <span class=" bg-[#0dcaf0] py-[4.2px] text-[12px]  text-black px-[7.8px] font-semibold rounded-[7px]" id="Status"></span></p>
+                    <p id="description" class="text-[14px] mb-[16px]">
+                    </p>
+                    <a class="py-[6px] hover:bg-[#ffc107] transition-colors duration-[0.3s] px-[12px] text-[16px] border border-[#ffc107] rounded-[7px]" id="goToGameUrl" target="_blank">Show Game</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ////////////////////// -->
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <!-- <script src="./js/bootstrap.bundle.min.js"></script> -->
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
